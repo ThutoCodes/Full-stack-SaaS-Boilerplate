@@ -40,6 +40,18 @@ I customized and extended the base architecture to simulate a real-world SaaS pr
 
 ---
 
+🛡 License
+This project is open source under the MIT License.
+
+📬 Contact
+If you'd like to collaborate, hire, or discuss this project, feel free to reach out:
+
+GitHub: https://github.com/ThutoCodes
+
+LinkedIn: linkedin.com/in/thuto-thabang-mpshe-361917293
+
+---
+
 ## 🚀 Setup (Local Development)
 
 ### 1. API
@@ -53,12 +65,4 @@ cd app
 yarn install
 yarn dev
 
-🛡 License
-This project is open source under the MIT License.
 
-📬 Contact
-If you'd like to collaborate, hire, or discuss this project, feel free to reach out:
-
-GitHub: https://github.com/ThutoCodes
-
-LinkedIn: linkedin.com/in/thuto-thabang-mpshe-361917293
