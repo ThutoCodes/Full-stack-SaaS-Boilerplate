@@ -10,10 +10,10 @@ class Login extends React.Component {
       <Layout {...this.props}>
         <div style={{ textAlign: 'center', margin: '0 20px' }}>
           <Head>
-            <title>Log in to SaaS boilerplate by Async</title>
+            <title>Log in to BizLaunch</title>
             <meta
               name="description"
-              content="Login and signup page for SaaS boilerplate demo by Async"
+              content="Login and signup page for BizLaunch - SaaS Starter by Thuto Mpshe"
             />
           </Head>
           <br />

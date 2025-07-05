@@ -30,45 +30,44 @@ export async function insertTemplates() {
   const templates = [
     {
       name: 'welcome',
-      subject: 'Welcome to SaaS boilerplate by Async',
+      subject: 'Welcome to BizLaunch by Thuto Mpshe',
       message: `Welcome <%= userName %>,
         <p>
-          Thanks for signing up on our <a href="https://github.com/async-labs/saas" target="blank">SaaS boilerplate</a>!
+          Thanks for signing up on <b>BizLaunch</b>, a modern SaaS starter built and maintained by Thuto Mpshe.
         </p>
         <p>
-          If you are learning how to build a SaaS web app, check out our 2 books:
-           <a href="https://builderbook.org" target="blank">Builder Book</a>
-           and
-           <a href="https://builderbook.org/book" target="blank">SaaS Boilerplate</a>.
+          This platform is ideal for startups and small teams looking to quickly launch subscription-based web apps.
         </p>
         <p>
-          Also check out
-          <a href="https://async-await.com" target="blank"> Async</a>
-          , our communication tool for small teams of software developers.
+          If you'd like to collaborate, contribute, or learn more, visit:
+          <a href="https://github.com/ThutoCodes/Full-stack-SaaS-Boilerplate" target="blank">My GitHub</a>.
         </p>
-        Kelly & Timur, Team Async
+        <p>
+          All the best,<br />
+          Thuto Mpshe
+        </p>
       `,
     },
     {
       name: 'login',
-      subject: 'Login link for saas-app.async-await.com',
+      subject: 'Login link for your BizLaunch account',
       message: `
-        <p>Log into your account by clicking on this link: <a href="<%= loginURL %>"><%= loginURL %></a>.</p>`,
+        <p>Log into your BizLaunch account by clicking on this secure link: <a href="<%= loginURL %>"><%= loginURL %></a>.</p>`,
     },
     {
       name: 'invitation',
-      subject: 'You are invited to join a team at saas-app.async-await.com',
-      message: `You've been invited to join <b><%= teamName%></b>.
-        <br/>Click here to accept the invitation: <%= invitationURL%>
+      subject: 'You are invited to join a team on BizLaunch',
+      message: `You've been invited to join <b><%= teamName %></b> on BizLaunch.
+        <br/>Click here to accept your invitation: <%= invitationURL %>
       `,
     },
     {
       name: 'newPost',
-      subject: 'New Post was created in Discussion: <%= discussionName %>',
-      message: `<p>New Post in Discussion: "<%= discussionName%>" by <%= authorName%></p>
-        New Post: "<%= postContent %>"
+      subject: 'New post created in Discussion: <%= discussionName %>',
+      message: `<p>New post in "<%= discussionName %>" by <%= authorName %></p>
+        <p><%= postContent %></p>
         <p>---</p>
-        <p>View it at <a href="<%= discussionLink %>"><%= discussionLink %></a>.</p>
+        <p>View and reply at <a href="<%= discussionLink %>"><%= discussionLink %></a>.</p>
       `,
     },
   ];
@@ -91,7 +90,7 @@ export default async function getEmailTemplate(name: string, params: any) {
   const et = await EmailTemplate.findOne({ name }).setOptions({ lean: true });
 
   if (!et) {
-    throw new Error('Email Template is not found in database.');
+    throw new Error('Email Template not found in database.');
   }
 
   return {
